@@ -1,20 +1,29 @@
 {
   "name": "cityfilter",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.8",
+  "private": false,
+  "main": "./dist/cityfilter.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name cityfilter ./src/components/index.js"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "@riophae/vue-treeselect": "0.0.37"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.0.1",
+    "axios": "^0.18.0",
+    "vue": "^2.5.17",
+    "vue-axios": "^2.1.4"
   },
   "eslintConfig": {
     "root": true,
@@ -39,5 +48,12 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ]
 }
